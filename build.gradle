@@ -13,6 +13,8 @@ java {
 
 repositories {
     mavenCentral()
+    // wire mock
+    maven { url "https://jitpack.io" }
 }
 
 ext {
@@ -29,8 +31,10 @@ dependencies {
     // test container
     testImplementation 'org.springframework.boot:spring-boot-testcontainers'
     testImplementation 'org.testcontainers:junit-jupiter'
-    // test container wire mock
+    // wire mock
     testImplementation("org.wiremock:wiremock-standalone:3.2.0")
+    // test container with wire mock
+    testImplementation("com.github.wiremock:wiremock-testcontainers-java:1.0-alpha-7")
 
 }
 
