@@ -4,10 +4,13 @@ import com.practice.testcontainer.resilience_practice.service.PracticeServiceV1;
 import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("/v1")
+@RestController
+@RequestMapping("v1")
 public class PracticeControllerV1 {
+
 
     @Autowired
     private PracticeServiceV1 service;

@@ -19,10 +19,11 @@ class WireMockTestContainerRestClientTest {
      * resource에 wire mock의 API SPEC을 정의하여 API 서버를 사용하는 방식
      */
     @Test
-    void shouldGetAlbumById() {
+    void test() {
         Long albumId = 1L;
         RestClient restClient = RestClient.builder()
-            .baseUrl("http://localhost:" + wiremockServer.getPort() + "/albums/" + albumId + "/photos")
+            .baseUrl(
+                "http://localhost:" + wiremockServer.getPort() + "/albums/" + albumId + "/photos")
             .build();
 
         ResponseEntity<String> response = restClient.get()
@@ -31,4 +32,5 @@ class WireMockTestContainerRestClientTest {
             .toEntity(String.class);
 
         System.out.println(response);
+    }
 }

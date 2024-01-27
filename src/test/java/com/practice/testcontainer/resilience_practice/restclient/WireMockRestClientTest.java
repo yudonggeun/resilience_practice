@@ -12,7 +12,7 @@ import org.junit.jupiter.api.extension.RegisterExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.web.client.RestClient;
 
-@SpringBootTest
+//@SpringBootTest
 public class WireMockRestClientTest {
 
     @RegisterExtension
